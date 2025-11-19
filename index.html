@@ -257,13 +257,6 @@
           <p class="small mb-0">Alexandre Carlos Martins</p>
           <p class="small">Agnaldo Aparecido Martins</p>
         </div>
-        <div class="col-md-2">
-          <h6>Siga-nos</h6>
-          <div class="social-icons">
-            <a href="#"><i class="bi bi-instagram"></i></a>
-            <a href="#"><i class="bi bi-facebook"></i></a>
-            <a href="#"><i class="bi bi-youtube"></i></a>
-          </div>
         </div>
       </div>
       <hr class="my-4" style="border-color:rgba(255,255,255,.3)">
@@ -359,61 +352,25 @@
     document.getElementById("orcamentoForm").addEventListener("submit", async function(e) {
       e.preventDefault();
 
-      const form = this;
-      const nome = form.querySelector("input[name='nome']").value.trim();
-      const numero = form.querySelector("input[name='numero']").value.trim();
-      const endereco = form.querySelector("input[name='endereco']").value.trim();
-      const descricao = form.querySelector("textarea[name='descricao']").value.trim();
-
-      // Validação simples
-      if (!nome || !numero || !endereco || !descricao) {
-        Swal.fire({
-          title: "Campos incompletos",
-          text: "Por favor, preencha todos os campos antes de enviar.",
-          icon: "warning",
-          confirmButtonColor: "#0d6efd"
-        });
-        return;
-      }
-
-      const formData = new FormData(form);
+      const formData = new FormData(this);
       formData.append("_captcha", "false");
       formData.append("_template", "box");
 
-      // Loading
-      Swal.fire({
-        title: "Enviando...",
-        text: "Por favor, aguarde",
-        allowOutsideClick: false,
-        didOpen: () => Swal.showLoading()
+      // Enviar para FormSubmit via fetch
+      await fetch("https://formsubmit.co/ajax/miguelhmartins870@gmail.com", {
+        method: "POST",
+        body: formData
       });
 
-      try {
-        const response = await fetch("https://formsubmit.co/ajax/miguelhmartins870@gmail.com", {
-          method: "POST",
-          body: formData
-        });
+      Swal.fire({
+        title: "Obrigado!",
+        text: "Sua solicitação foi enviada com sucesso.",
+        icon: "success",
+        confirmButtonText: "OK",
+        confirmButtonColor: "#0d6efd"
+      });
 
-        if (!response.ok) throw new Error("Erro no envio");
-
-        Swal.fire({
-          title: "Obrigado!",
-          text: "Sua solicitação foi enviada com sucesso.",
-          icon: "success",
-          confirmButtonText: "OK",
-          confirmButtonColor: "#0d6efd"
-        });
-
-        form.reset();
-      } catch (error) {
-        Swal.fire({
-          title: "Erro ao enviar",
-          text: "Ocorreu um problema ao enviar sua solicitação. Tente novamente mais tarde.",
-          icon: "error",
-          confirmButtonColor: "#0d6efd"
-        });
-      }
-    });();
+      this.reset();
     });
   </script>
 </body>
