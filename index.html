@@ -206,7 +206,7 @@
           <div class="card p-4 shadow-sm">
             <form action="https://formsubmit.co/miguelhmartins870@gmail.com" method="POST">
   <input type="hidden" name="_template" value="table">
-  <input type="hidden" name="_next" value="https://example.com/#obrigado">
+  
   <input type="hidden" name="_subject" value="Solicitação de Orçamento - Calhas 2D">
   <input type="hidden" name="_captcha" value="false">
   <div class="mb-3">
@@ -324,5 +324,12 @@
   <a class="wa-label" href="https://wa.me/551935715205?text=Olá%2C+gostaria+de+solicitar+um+orçamento" target="_blank" rel="noopener">Fale conosco</a>
 </div>
 
+  <script>
+    document.querySelector("form").addEventListener("submit", function () {
+      setTimeout(() => {
+        alert("Obrigado! Sua solicitação foi enviada com sucesso.");
+      }, 500);
+    });
+  </script>
 </body>
 </html>
