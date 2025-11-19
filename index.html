@@ -204,7 +204,7 @@
         </div>
         <div class="col-lg-5">
           <div class="card p-4 shadow-sm">
-            <form action="https://formsubmit.co/miguelhmartins870@gmail.com" method="POST">
+            <form id="orcamentoForm">
   <input type="hidden" name="_template" value="table">
   
   <input type="hidden" name="_subject" value="Solicitação de Orçamento - Calhas 2D">
@@ -322,12 +322,23 @@
 <div class="whatsapp-float">
   <a href="https://wa.me/551935715205?text=Olá%2C+gostaria+de+solicitar+um+orçamento" target="_blank" rel="noopener" aria-label="WhatsApp"><img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="WhatsApp"></a>
   <a class="wa-label" href="https://wa.me/551935715205?text=Olá%2C+gostaria+de+solicitar+um+orçamento" target="_blank" rel="noopener">Fale conosco</a>
-</div>
+</div><a href="https://wa.me/551935715205" class="position-fixed" style="bottom:20px; right:20px; z-index:9999;"><img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" width="60"></a>
+
   <!-- SweetAlert2 -->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <script>
-  document.querySelector("form").addEventListener("submit", function () {
+  document.querySelector("form").addEventListener("submit", function (e) {
+    e.preventDefault(); // Impede abrir o FormSubmit
+
+    Swal.fire({
+      title: "Obrigado!",
+      text: "Sua solicitação foi enviada com sucesso.",
+      icon: "success",
+      confirmButtonText: "OK",
+      confirmButtonColor: "#0d6efd"
+    });
+  });("submit", function () {
     setTimeout(() => {
       Swal.fire({
         title: "Obrigado!",
@@ -342,6 +353,32 @@
       setTimeout(() => {
         alert("Obrigado! Sua solicitação foi enviada com sucesso.");
       }, 500);
+    });
+  </script>
+  <script>
+    // Envio AJAX sem abrir o FormSubmit
+    document.getElementById("orcamentoForm").addEventListener("submit", async function(e) {
+      e.preventDefault();
+
+      const formData = new FormData(this);
+      formData.append("_captcha", "false");
+      formData.append("_template", "box");
+
+      // Enviar para FormSubmit via fetch
+      await fetch("https://formsubmit.co/ajax/miguelhmartins870@gmail.com", {
+        method: "POST",
+        body: formData
+      });
+
+      Swal.fire({
+        title: "Obrigado!",
+        text: "Sua solicitação foi enviada com sucesso.",
+        icon: "success",
+        confirmButtonText: "OK",
+        confirmButtonColor: "#0d6efd"
+      });
+
+      this.reset();
     });
   </script>
 </body>
