@@ -226,13 +226,6 @@
     <textarea class="form-control" name="descricao" rows="3" placeholder="Explique o que está acontecendo (infiltração, calha entupida, substituição, etc.)" required></textarea>
   </div>
   <button type="submit" class="btn btn-primary w-100">Solicitar orçamento</button>
-  <div class="mb-3">
-    <label class="form-label">Anexar imagem (opcional)</label>
-    <input type="file" name="imagens" accept="image/*" class="form-control" multiple id="inputImagens">
-    <small class="text-white-50">(Você pode enviar até 3 imagens)</small>
-    <div id="previewImagens" class="mt-2 d-flex gap-2 flex-wrap"></div>
-    <small class="text-white-50">(Você pode enviar até 3 imagens)</small>
-  </div>
 </form>
           </div>
         </div>
@@ -370,115 +363,6 @@
       const formData = new FormData(this);
       formData.append("_captcha", "false");
       formData.append("_template", "box");
-      // Pré-visualização e remoção de imagem
-    const inputImgs = document.getElementById('inputImagens');
-    const preview = document.getElementById('previewImagens');
-    let listaImagens = [];
-
-    inputImgs.addEventListener('change', function() {
-      preview.innerHTML = "";
-      listaImagens = Array.from(this.files).slice(0, 3);
-
-      listaImagens.forEach((img, index) => {
-        const reader = new FileReader();
-        reader.onload = e => {
-          const box = document.createElement('div');
-          box.style.position = 'relative';
-          box.style.width = '80px';
-          box.style.height = '80px';
-
-          const image = document.createElement('img');
-          image.src = e.target.result;
-          image.style.width = '100%';
-          image.style.height = '100%';
-          image.style.objectFit = 'cover';
-          image.style.borderRadius = '6px';
-
-          const btn = document.createElement('button');
-          btn.innerHTML = '×';
-          btn.style.position = 'absolute';
-          btn.style.top = '-8px';
-          btn.style.right = '-8px';
-          btn.style.background = 'red';
-          btn.style.color = 'white';
-          btn.style.border = 'none';
-          btn.style.borderRadius = '50%';
-          btn.style.width = '22px';
-          btn.style.height = '22px';
-          btn.style.cursor = 'pointer';
-          btn.onclick = () => {
-            listaImagens.splice(index, 1);
-            atualizarPreview();
-          };
-
-          box.appendChild(image);
-          box.appendChild(btn);
-          preview.appendChild(box);
-        };
-        reader.readAsDataURL(img);
-      });
-    });
-
-    function atualizarPreview() {
-      preview.innerHTML = "";
-      listaImagens.forEach((img, index) => {
-        const reader = new FileReader();
-        reader.onload = e => {
-          const box = document.createElement('div');
-          box.style.position = 'relative';
-          box.style.width = '80px';
-          box.style.height = '80px';
-
-          const image = document.createElement('img');
-          image.src = e.target.result;
-          image.style.width = '100%';
-          image.style.height = '100%';
-          image.style.objectFit = 'cover';
-          image.style.borderRadius = '6px';
-
-          const btn = document.createElement('button');
-          btn.innerHTML = '×';
-          btn.style.position = 'absolute';
-          btn.style.top = '-8px';
-          btn.style.right = '-8px';
-          btn.style.background = 'red';
-          btn.style.color = 'white';
-          btn.style.border = 'none';
-          btn.style.borderRadius = '50%';
-          btn.style.width = '22px';
-          btn.style.height = '22px';
-          btn.style.cursor = 'pointer';
-          btn.onclick = () => {
-            listaImagens.splice(index, 1);
-            atualizarPreview();
-          };
-
-          box.appendChild(image);
-          box.appendChild(btn);
-          preview.appendChild(box);
-        };
-        reader.readAsDataURL(img);
-      });
-    }
-
-    // Limitar envio a no máximo 3 imagens
-      const files = document.querySelector('[name="imagens"]').files;
-      if (files.length > 3) {
-        Swal.fire({
-          title: "Erro",
-          text: "Você pode enviar no máximo 3 imagens.",
-          icon: "error",
-          confirmButtonColor: "#0d6efd"
-        });
-        return;
-      }
-
-      for (let i = 0; i < files.length; i++) {
-        formData.append("imagens[]", files[i]);
-      }
-
-      // Imagens enviadas via FormData
-, "box");
 
       // Enviar para FormSubmit via fetch
       await fetch("https://formsubmit.co/ajax/miguelhmartins870@gmail.com", {
