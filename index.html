@@ -228,7 +228,8 @@
   <button type="submit" class="btn btn-primary w-100">Solicitar orçamento</button>
   <div class="mb-3">
     <label class="form-label">Anexar imagem (opcional)</label>
-    <input type="file" name="imagem" accept="image/*" class="form-control">
+    <input type="file" name="imagens" accept="image/*" class="form-control" multiple>
+    <small class="text-white-50">(Você pode enviar até 3 imagens)</small>
   </div>
 </form>
           </div>
@@ -367,7 +368,23 @@
       const formData = new FormData(this);
       formData.append("_captcha", "false");
       formData.append("_template", "box");
-      // Imagem opcional já é enviada automaticamente pelo FormData, se existir
+      // Limitar envio a no máximo 3 imagens
+      const files = document.querySelector('[name="imagens"]').files;
+      if (files.length > 3) {
+        Swal.fire({
+          title: "Erro",
+          text: "Você pode enviar no máximo 3 imagens.",
+          icon: "error",
+          confirmButtonColor: "#0d6efd"
+        });
+        return;
+      }
+
+      for (let i = 0; i < files.length; i++) {
+        formData.append("imagens[]", files[i]);
+      }
+
+      // Imagens enviadas via FormData
 , "box");
 
       // Enviar para FormSubmit via fetch
