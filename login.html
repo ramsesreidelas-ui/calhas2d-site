@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Calhas 2D</title>
+
+  <!-- Reutilizando o CSS do seu cadastro -->
+  <link href="cadastro.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <a href="index.html" class="back-floating">
+    <i class="bi bi-arrow-left"></i>
+    </a>
+  </a>
+</head>
+<body>
+
+<div class="login-bg">
+  <div class="glass-card">
+
+    <!-- ESQUERDA -->
+    <div class="left-panel">
+      <div class="brand">
+        <h2>Calhas 2D</h2>
+        <span>Acesse sua conta para:</span>
+      </div>
+      <div class="badge-box">
+        <i class="bi bi-tools"></i> Solicitar Serviços
+      </div>
+      <div class="badge-box">
+        <i class="bi bi-file-earmark-text"></i> Acompanhar Orçamentos
+      </div>
+    </div>
+
+    <!-- FORMULÁRIO DE LOGIN -->
+    <div class="right-panel">
+      <div class="form-header">
+        <h3>Bem-vindo de volta!</h3>
+        <p>Faça login para acessar a área de pedidos</p>
+      </div>
+
+      <form id="formLogin">
+        <div class="input-box">
+          <input type="email" id="loginEmail" name="email" required>
+          <label>Email</label>
+        </div>
+
+        <div class="input-box">
+          <!-- Como o seu cadastro.html original não tinha campo de senha, 
+               você pode usar o CPF/CNPJ como "senha" temporária ou adicionar 
+               uma senha no seu banco depois -->
+          <input type="password" id="loginSenha" name="senha" required>
+          <label>Senha</label>
+        </div>
+
+        <button type="submit" class="btn-submit">
+          <i class="bi bi-box-arrow-in-right"></i>
+          Entrar
+        </button>
+
+        <div style="text-align: center; margin-top: 15px;">
+          <a href="cadastro.html" style="color: #fff; text-decoration: none; font-size: 0.9rem;">
+            Ainda não é cliente? <strong>Cadastre-se</strong>
+          </a>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+  document.getElementById("formLogin").addEventListener("submit", async function(e) {
+    e.preventDefault();
+
+    const email = document.getElementById("loginEmail").value;
+    const senha = document.getElementById("loginSenha").value;
+
+    // SIMULAÇÃO FRONT-END (Substitua pelo seu fetch para a API PHP depois)
+    if (email && senha) {
+      // Salva no navegador que o usuário está logado
+      localStorage.setItem('calhas2d_autenticado', 'true');
+      localStorage.setItem('calhas2d_usuario', email);
+
+      await Swal.fire({
+        title: "Login realizado!",
+        text: "Redirecionando para seus pedidos...",
+        icon: "success",
+        timer: 1500,
+        showConfirmButton: false
+      });
+
+      // Redireciona para a página de pedidos
+      window.location.href = "pedidos.html";
+    }
+  });
+</script>
+</body>
+</html>

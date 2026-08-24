@@ -1,378 +1,831 @@
 <!doctype html>
-
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Calhas 2D — Empresa de calhas e rufos em Leme, SP: instalação, manutenção, fabricação sob medida.">
-  <meta name="author" content="Calhas 2D – Leme, SP">
-  <title>Calhas 2D – Leme (SP)</title>  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">  <style>
-    /* --- NOVO VISUAL PREMIUM --- */
-    .navbar {
-      backdrop-filter: blur(12px);
-      background: rgba(255,255,255,0.75) !important;
-      transition: 0.3s ease;
-    }
-    .navbar.scrolled {
-      background: rgba(255,255,255,0.95) !important;
-      box-shadow: 0 4px 18px rgba(0,0,0,0.08);
-    }
-    body {
-      background: linear-gradient(180deg, #e8f1ff, #ffffff 40%);
-    }
-    .btn-primary {
-      font-weight: 600;
-      padding: 0.6rem 1.4rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(26,115,232,0.25);
-      transition: 0.2s;
-    }
-    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 6px 16px rgba(26,115,232,0.35); }
-    .card-service { transition: 0.25s ease; }
-    .card-service:hover { transform: translateY(-6px); box-shadow: 0 12px 28px rgba(10,10,20,0.10); }
-    .hero { background: linear-gradient(135deg, #dce9ff, #f6f9ff); }
-    footer.footer { background:#0675B3 !important; color:#fff !important; }
-    footer.footer p, footer.footer h5, footer.footer h6, footer.footer small { color:#fff !important; }
-
-    :root { --brand: #1a73e8; --accent: #0b3d91; }
-    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; line-height: 1.5; }
-    .hero { background: linear-gradient(90deg, rgba(26,115,232,0.1), rgba(11,61,145,0.05)); padding: 4rem 0; }
-    .service-icon { font-size: 2.25rem; color: var(--brand); }
-    .card-service { border: none; border-radius: 12px; box-shadow: 0 6px 18px rgba(10,10,20,0.06); }
-    .gallery img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; }
-    .footer { background: #0d47a1; color: #fff; padding: 60px 0 20px; }
-    .badge-service { background: linear-gradient(90deg, var(--brand), var(--accent)); color: #fff; }
-    @media(min-width: 992px) { .hero { padding: 6rem 0; } .gallery img { height: 240px; } }
   
+  <title>Calhas 2D – Calhas e Rufos em Leme (SP)</title>
+  <meta name="description" content="Calhas 2D em Leme-SP: Fabricação e instalação de calhas, rufos, pingadeiras e coifas. Atendimento no Jardim Presidente e região. Orçamento rápido via WhatsApp.">
+  <meta name="keywords" content="calhas leme, rufos leme, calhas 2d, calheiro em leme, conserto de telhado leme, pingadeiras, coifas, jardim presidente, calhas sob medida, instalação de calhas, manutenção de calhas">
+  <meta name="author" content="Calhas 2D">
+  <meta name="robots" content="index, follow">
+  
+  <meta property="og:title" content="Calhas 2D – Excelência em Coberturas">
+  <meta property="og:description" content="Precisa de calhas ou rufos em Leme? Fale com a gente! Qualidade, garantia e preço justo.">
+  <meta property="og:image" content="logo.png">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
 
-    /* Navegação moderna */
-    .navbar-brand{letter-spacing:0.4px}
-    .navbar .nav-link{position:relative;transition:all .18s ease;color:rgba(0,0,0,.7)}
-    .navbar .nav-link::after{content:'';position:absolute;left:50%;transform:translateX(-50%);bottom:-6px;width:0;height:3px;border-radius:3px;background:var(--brand);transition:width .18s ease}
-    .navbar .nav-link:hover::after,.navbar .nav-link.active::after{width:48%}
-    .btn-primary{background:linear-gradient(90deg,var(--brand),var(--accent));border:none}
-
-    /* Botão WhatsApp flutuante com label */
-    .whatsapp-float{position:fixed;right:20px;bottom:20px;z-index:9999;display:flex;align-items:center;gap:10px}
-    .whatsapp-float .wa-label{background:var(--brand);color:#fff;padding:10px 14px;border-radius:30px;box-shadow:0 8px 20px rgba(26,115,232,0.18);font-weight:600}
-    .whatsapp-float img{width:56px;height:56px;border-radius:50%;box-shadow:0 8px 22px rgba(10,10,30,0.12)}
-
-    /* Footer ajustes */
-    .footer .social-icons a{margin-right:10px;color:rgba(255,255,255,.9);transition:transform .15s}.footer .social-icons a:hover{transform:translateY(-3px)}
-
-  </style>
+  <link rel="icon" href="logo.png" type="image/png">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  
+  <link href="styles.css" rel="stylesheet">
 </head>
-<body>  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+<body>
+
+  <div id="preloader">
+    <div class="loader-content">
+      <div class="logo-container">
+          <img src="logo.png" alt="Logo Calhas 2D" class="preloader-logo">
+          <div class="spinner-overlay"></div> 
+      </div>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="#">Calhas 2D</a>
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+        <img src="logo.png" alt="Logo Calhas 2D" class="nav-logo-img">
+        <span>Calhas 2D</span>
+      </a>
+
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navMenu">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
           <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
           <li class="nav-item"><a class="nav-link" href="#galeria">Galeria</a></li>
-          <li class="nav-item"><a class="nav-link" href="#orcamento">Orçamento</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+          
+<li class="nav-item">
+  <a class="nav-link" href="pedidos.html">
+   Solicitar Serviço 
+  </a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="cadastro.html">
+    <i class="bi bi-people-fill me-1"></i> Cadastro
+  </a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="login.html">
+  <i class="bi bi-door-open"></i> login
+</a>
+</li>
+
+
+     
+         
+          <li class="nav-item ms-lg-3">
+         
+          </li>
         </ul>
-        <a href="#orcamento" class="btn btn-primary ms-lg-3">Solicitar orçamento</a>
       </div>
     </div>
-  </nav>  <header class="hero">
-<div id="heroCarousel" class="carousel slide mb-4" data-bs-ride="carousel"><div class="carousel-inner"><div class="carousel-item active"><img src="images (2).jpeg" class="d-block w-100 rounded shadow-sm" alt="Calhas"></div><div class="carousel-item"><img src="images (3).jpeg" class="d-block w-100 rounded shadow-sm" alt="Rufos"></div></div></div>
+  </nav>
+
+  <header class="hero-section d-flex align-items-center">
     <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-6">
-          <h1 class="display-5 fw-bold">Calhas 2D: Excelência em Calhas e Rufos</h1>
-          <p class="lead text-muted">Empresa localizada em Leme (SP), especializada em calhas, rufos e soluções para escoamento de águas pluviais, com fabricação sob medida, instalação e manutenção.</p>
-          <div class="d-flex gap-2 mt-3">
-            <a href="#orcamento" class="btn btn-primary btn-lg">Solicitar orçamento</a>
-            <a href="#contato" class="btn btn-outline-secondary btn-lg">Fale conosco</a>
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6 hero-text">
+          <span class="badge bg-light text-primary mb-3 px-3 py-2 rounded-pill fw-bold shadow-sm">
+            <i class="bi bi-geo-alt-fill me-1"></i> Leme, SP e Região
+          </span>
+          <h1 class="display-4 fw-bold mb-4 text-dark">
+            Soluções completas em <span class="text-gradient">Calhas e Rufos</span>
+          </h1>
+          <p class="lead text-secondary mb-5">
+            Proteja seu imóvel com a <strong>Calhas 2D</strong>. Fabricação própria no Jd. Presidente, instalação precisa e materiais de alta durabilidade.
+          </p>
+          <div class="d-flex gap-3 flex-wrap">
+            <a href="#orcamento" class="btn btn-primary btn-lg px-4 shadow-lg">Pedir Cotação</a>
+<button class="btn btn-warning btn-lg px-4 shadow-lg fw-bold text-dark" data-bs-toggle="modal" data-bs-target="#calcModal">
+  <i class="bi bi-calculator-fill me-2"></i>Simular Valor do Material
+</button>
+            
           </div>
-          <ul class="list-unstyled mt-4">
-            <li><strong>Sede:</strong> Leme, SP</li>
-            <li><strong>Endereço:</strong> Rua Quaresmeira, 425, Jardim Presidente</li>
-            <li><strong>Contato:</strong> (19) 3571-5205</li>
-          </ul>
+          
+          <div class="hero-features mt-5 pt-4 border-top">
+            <div class="row g-3">
+              <div class="col-auto d-flex align-items-center gap-2">
+                <i class="bi bi-check-circle-fill text-success"></i> <span>Entrega Rápida</span>
+              </div>
+              <div class="col-auto d-flex align-items-center gap-2">
+                <i class="bi bi-check-circle-fill text-success"></i> <span>Material Premium</span>
+              </div>
+              <div class="col-auto d-flex align-items-center gap-2">
+                <i class="bi bi-check-circle-fill text-success"></i> <span>Garantia</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="col-lg-6 text-center mt-4 mt-lg-0">
-          <img src="images (2).jpeg" alt="Instalação de calha" class="img-fluid rounded shadow-sm">
+        
+        <div class="col-lg-6">
+          <div class="position-relative hero-image-wrapper">
+             <div id="heroCarousel" class="carousel slide rounded-4 shadow-lg overflow-hidden" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="logo2.png" class="d-block w-100" alt="Instalação de Calhas em Leme" style="height: 400px; object-fit: cover;">
+                </div>
+                <div class="carousel-item">
+                  <img src="logo2.png" class="d-block w-100" alt="Rufos e Pingadeiras" style="height: 400px; object-fit: cover;">
+                </div>
+              </div>
+            </div>
+            <div class="decorative-blob"></div>
+          </div>
         </div>
       </div>
     </div>
-  </header>  <section id="servicos" class="py-5">
+  </header>
+
+  <section id="servicos" class="section-padding bg-light-blue">
     <div class="container">
-      <div class="text-center mb-5">
-        <span class="badge badge-service p-2 rounded-pill">Nossos Serviços</span>
-        <h2 class="mt-3">O que fazemos</h2>
-        <p class="text-muted">Soluções completas para calhas e rufos, com foco em qualidade e durabilidade.</p>
+      <div class="text-center mb-5 mw-800 mx-auto">
+        <h6 class="text-primary fw-bold text-uppercase ls-2">O que fazemos</h6>
+        <h2 class="fw-bold mb-3">Nossos Serviços</h2>
+        <p class="text-muted">Da fabricação à instalação, cuidamos de cada detalhe para garantir o escoamento perfeito da água.</p>
       </div>
+
       <div class="row g-4">
         <div class="col-md-6 col-lg-4">
-          <div class="card p-4 card-service h-100">
-            <div class="d-flex align-items-start gap-3">
-              <i class="bi bi-droplet service-icon"></i>
-              <div>
-                <h5>Instalação de Calhas</h5>
-                <p class="mb-0 text-muted">Fabricação sob medida e instalação precisa para telhados residenciais e comerciais.</p>
-              </div>
+          <div class="service-card h-100 p-4 bg-white rounded-4 shadow-sm">
+            <div class="icon-box mb-4 bg-primary-subtle text-primary rounded-3 d-inline-flex p-3">
+              <i class="bi bi-droplet-fill fs-3"></i>
             </div>
+            <h4 class="fw-bold mb-3">Instalação de Calhas</h4>
+            <p class="text-muted mb-0">Fabricação sob medida e instalação precisa para telhados residenciais e comerciais.</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-4">
-          <div class="card p-4 card-service h-100">
-            <div class="d-flex align-items-start gap-3">
-              <i class="bi bi-tools service-icon"></i>
-              <div>
-                <h5>Rufos e Vedação</h5>
-                <p class="mb-0 text-muted">Rufos metálicos para proteger encontros de cobertura e prevenir infiltrações.</p>
-              </div>
+          <div class="service-card h-100 p-4 bg-white rounded-4 shadow-sm">
+            <div class="icon-box mb-4 bg-primary-subtle text-primary rounded-3 d-inline-flex p-3">
+              <i class="bi bi-bricks fs-3"></i>
             </div>
+            <h4 class="fw-bold mb-3">Rufos e Vedação</h4>
+            <p class="text-muted mb-0">Proteção essencial para os encontros entre parede e telhado.</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-4">
-          <div class="card p-4 card-service h-100">
-            <div class="d-flex align-items-start gap-3">
-              <i class="bi bi-brush service-icon"></i>
-              <div>
-                <h5>Manutenção de Calhas</h5>
-                <p class="mb-0 text-muted">Limpeza, desentupimento e manutenção preventiva para garantir o funcionamento correto.</p>
-              </div>
+          <div class="service-card h-100 p-4 bg-white rounded-4 shadow-sm">
+            <div class="icon-box mb-4 bg-primary-subtle text-primary rounded-3 d-inline-flex p-3">
+              <i class="bi bi-tools fs-3"></i>
             </div>
+            <h4 class="fw-bold mb-3">Manutenção e Limpeza</h4>
+            <p class="text-muted mb-0">Serviço preventivo de limpeza para garantir a vida útil do sistema.</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-4">
-          <div class="card p-4 card-service h-100">
-            <div class="d-flex align-items-start gap-3">
-              <i class="bi bi-card-checklist service-icon"></i>
-              <div>
-                <h5>Reparo e Substituição</h5>
-                <p class="mb-0 text-muted">Troca de trechos danificados, soldagem e reforço de componentes.</p>
-              </div>
+          <div class="service-card h-100 p-4 bg-white rounded-4 shadow-sm">
+            <div class="icon-box mb-4 bg-primary-subtle text-primary rounded-3 d-inline-flex p-3">
+              <i class="bi bi-hammer fs-3"></i>
             </div>
+            <h4 class="fw-bold mb-3">Reparos Gerais</h4>
+            <p class="text-muted mb-0">Troca de trechos danificados e soldagem especializada.</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-4">
-          <div class="card p-4 card-service h-100">
-            <div class="d-flex align-items-start gap-3">
-              <i class="bi bi-pencil service-icon"></i>
-              <div>
-                <h5>Fabricação Sob Medida</h5>
-                <p class="mb-0 text-muted">Perfis personalizados conforme o projeto do cliente.</p>
-              </div>
+          <div class="service-card h-100 p-4 bg-white rounded-4 shadow-sm">
+            <div class="icon-box mb-4 bg-primary-subtle text-primary rounded-3 d-inline-flex p-3">
+              <i class="bi bi-rulers fs-3"></i>
             </div>
+            <h4 class="fw-bold mb-3">Sob Medida</h4>
+            <p class="text-muted mb-0">Perfis personalizados de acordo com a necessidade do projeto.</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-4">
-          <div class="card p-4 card-service h-100">
-            <div class="d-flex align-items-start gap-3">
-              <i class="bi bi-geo-alt service-icon"></i>
-              <div>
-                <h5>Atendimento Local</h5>
-                <p class="mb-0 text-muted">Localizada em Leme (SP) com atendimento rápido e próximo.</p>
-              </div>
+          <div class="service-card h-100 p-4 bg-white rounded-4 shadow-sm">
+            <div class="icon-box mb-4 bg-primary-subtle text-primary rounded-3 d-inline-flex p-3">
+              <i class="bi bi-shop fs-3"></i>
+            </div>
+            <h4 class="fw-bold mb-3">Atendimento Local</h4>
+            <p class="text-muted mb-0">Empresa de Leme/SP. Atendimento rápido e garantia real.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="galeria" class="section-padding">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-end mb-4">
+        <div>
+          <h6 class="text-primary fw-bold text-uppercase ls-2">Portfólio</h6>
+          <h2 class="fw-bold">Nossos Trabalhos</h2>
+        </div>
+      </div>
+      
+      <div class="row g-3">
+        <div class="col-md-6 col-lg-3">
+          <div class="gallery-item rounded-3 overflow-hidden shadow-sm position-relative">
+            <img src="calha1.jpg" alt="Calha instalada Leme">
+            <div class="overlay d-flex align-items-center justify-content-center">
+              <i class="bi bi-zoom-in text-white fs-2"></i>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="gallery-item rounded-3 overflow-hidden shadow-sm position-relative">
+            <img src="rufo1.jpg" alt="Rufo pingadeira">
+            <div class="overlay d-flex align-items-center justify-content-center">
+              <i class="bi bi-zoom-in text-white fs-2"></i>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="gallery-item rounded-3 overflow-hidden shadow-sm position-relative">
+            <img src="rufo2.jpg" alt="Manutenção calha">
+            <div class="overlay d-flex align-items-center justify-content-center">
+              <i class="bi bi-zoom-in text-white fs-2"></i>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="gallery-item rounded-3 overflow-hidden shadow-sm position-relative">
+            <img src="rufo3.jpg" alt="Projeto finalizado">
+            <div class="overlay d-flex align-items-center justify-content-center">
+              <i class="bi bi-zoom-in text-white fs-2"></i>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </section>  <section id="galeria" class="py-5 bg-light">
-    <div class="container">
-      <div class="text-center mb-4">
-        <h3>Galeria de Trabalhos</h3>
-        <p class="text-muted">Projetos realizados pela Calhas 2D. (Use fotos reais depois)</p>
-      </div>
-      <div class="row g-3 gallery">
-        <div class="col-6 col-md-4 col-lg-3"><img src="https://images.unsplash.com/photo-1508873699372-7ae3b1f2b3b6?q=80&w=800&auto=format&fit=crop&s=placeholder" alt="Projeto 1"></div>
-        <div class="col-6 col-md-4 col-lg-3"><img src="https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?q=80&w=800&auto=format&fit=crop&s=placeholder" alt="Projeto 2"></div>
-        <div class="col-6 col-md-4 col-lg-3"><img src="https://images.unsplash.com/photo-1581092795366-07aa5c6f4b6a?q=80&w=800&auto=format&fit=crop&s=placeholder" alt="Projeto 3"></div>
-        <div class="col-6 col-md-4 col-lg-3"><img src="https://images.unsplash.com/photo-1485965120184-e220f721d03e?q=80&w=800&auto=format&fit=crop&s=placeholder" alt="Projeto 4"></div>
-      </div>
-    </div>
-  </section>  <section id="orcamento" class="py-5">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-7">
-          <h3>Solicitar Orçamento</h3>
-          <p class="text-muted">Preencha os dados abaixo para solicitar um orçamento completo.</p>
-          <ul>
-            <li>Visita técnica (se necessário)</li>
-            <li>Proposta clara e escrita</li>
-            <li>Opções de pagamento: PIX, transferência, cartão (se for o caso)</li>
+  </section>
+
+  <section id="orcamento" class="section-padding bg-gradient-primary text-white position-relative overflow-hidden">
+    <div class="container position-relative z-1">
+      <div class="row align-items-center justify-content-between">
+        
+        <div class="col-lg-5 mb-5 mb-lg-0">
+          <h2 class="display-6 fw-bold mb-3">Pronto para resolver?</h2>
+          <p class="lead mb-4 opacity-75">Solicite um orçamento sem compromisso. Nossa equipe técnica analisará sua necessidade.</p>
+          
+          <ul class="list-unstyled d-flex flex-column gap-3 mb-4">
+            <li class="d-flex align-items-center gap-3">
+              <div class="bg-white bg-opacity-10 p-2 rounded-circle"><i class="bi bi-clipboard-check"></i></div>
+              <span>Visita técnica avaliativa</span>
+            </li>
+            <li class="d-flex align-items-center gap-3">
+              <div class="bg-white bg-opacity-10 p-2 rounded-circle"><i class="bi bi-file-text"></i></div>
+              <span>Orçamento detalhado e transparente</span>
+            </li>
+            <li class="d-flex align-items-center gap-3">
+              <div class="bg-white bg-opacity-10 p-2 rounded-circle"><i class="bi bi-credit-card"></i></div>
+              <span>Aceitamos PIX, Cartão e Transferência</span>
+            </li>
           </ul>
         </div>
-        <div class="col-lg-5">
-          <div class="card p-4 shadow-sm">
-            <form id="orcamentoForm">
-  <input type="hidden" name="_template" value="table">
-  
-  <input type="hidden" name="_subject" value="Solicitação de Orçamento - Calhas 2D">
-  <input type="hidden" name="_captcha" value="false">
-  <div class="mb-3">
-    <label class="form-label">Nome</label>
-    <input type="text" name="nome" class="form-control" required>
-  </div>
-  <div class="mb-3">
-    <label class="form-label">Número / WhatsApp</label>
-    <input type="tel" name="numero" class="form-control" required>
-  </div>
-  <div class="mb-3">
-    <label class="form-label">Endereço</label>
-    <input type="text" name="endereco" class="form-control" required placeholder="Rua, número, bairro, cidade">
-  </div>
-  <div class="mb-3">
-    <label class="form-label">Descrição do problema</label>
-    <textarea class="form-control" name="descricao" rows="3" placeholder="Explique o que está acontecendo (infiltração, calha entupida, substituição, etc.)" required></textarea>
-  </div>
-  <button type="submit" class="btn btn-primary w-100">Solicitar orçamento</button>
-</form>
+
+       
+
+      </div>
+    </div>
+  </section>
+
+  <footer id="contato" class="footer pt-5 pb-3">
+    <div class="container">
+      <div class="row g-4 mb-5">
+        
+        <div class="col-lg-4 col-md-6">
+          <img src="logo.png" alt="Logo Calhas 2D" class="mb-3 footer-logo-img">
+          
+          <h4 class="fw-bold mb-3 d-flex align-items-center gap-2">
+             Calhas 2D
+          </h4>
+          <p class="text-white-50 small mb-4">
+            Especialistas em proteção e escoamento de águas pluviais. Qualidade e compromisso em cada metro instalado em Leme e região.
+          </p>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <h5 class="fw-bold mb-3">Contato Rápido</h5>
+          <ul class="list-unstyled text-white-50">
+            <li class="mb-2"><i class="bi bi-geo-alt me-2 text-warning"></i> Rua Quaresmeira, 425 - Jd. Presidente, Leme/SP</li>
+              <li class="mb-2"><i class="bi bi-whatsapp me-2 text-success"></i> (19) 99770-7650</li>
+            <li class="mb-2"><i class="bi bi-envelope me-2 text-info"></i> contato@calhas2d.com</li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-12">
+          <h5 class="fw-bold mb-3">Funcionamento</h5>
+          <div class="bg-white bg-opacity-10 p-3 rounded-3">
+            <div class="d-flex justify-content-between mb-2 border-bottom border-secondary pb-2">
+              <span>Segunda - Sexta</span>
+              <span class="fw-bold">07:00 - 18:00</span>
+            </div>
+            <div class="d-flex justify-content-between text-white-50">
+              <span>Sábado - Domingo</span>
+              <span>Fechado</span>
+            </div>
+          </div>
+          <div class="mt-3 small text-white-50">
+            CNPJ: 18.294.105/0001-66<br>
+            Sócios: Alexandre C. Martins & Agnaldo A. Martins
           </div>
         </div>
+
+      </div>
+      
+      <div class="border-top border-secondary pt-4 text-center text-white-50 small">
+        <div class="d-md-flex justify-content-between align-items-center">
+          <div class="mb-2 mb-md-0">© <span id="year"></span> Calhas 2D</div>
+        </div>
       </div>
     </div>
-  </section><section id="obrigado" class="py-5" style="display:none;">
-  <div class="container text-center">
-    <h3>Obrigado pelo seu contato!</h3>
-    <p class="text-muted">Seu pedido de orçamento foi enviado com sucesso. Em breve retornaremos pelo WhatsApp ou telefone informado.</p>
+  </footer>
+<div class="modal fade" id="calcModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-0 shadow-lg rounded-4">
+      <div class="modal-header bg-dark text-white">
+        <h5 class="modal-title fw-bold"><i class="bi bi-calculator me-2"></i>Calculadora de Materiais</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-4">
+        <div class="alert alert-info small mb-3">
+          <i class="bi bi-info-circle-fill me-1"></i> O valor exibido é referente apenas ao <strong>material</strong>. Mão de obra e frete não inclusos.
+        </div>
+
+        <form id="calcForm">
+          <div class="mb-3">
+            <label class="form-label fw-bold text-muted">Tipo de Corte</label>
+            <select class="form-select bg-light" id="selectCorte" onchange="calcularPreco()">
+              <option value="0" selected disabled>Selecione o corte...</option>
+              <option value="1">Corte 10 (Padrão)</option>
+              <option value="2">Corte 15</option>
+              <option value="3">Corte 20</option>
+              <option value="4">Corte 25</option>
+              <option value="5">Corte 28</option>
+              <option value="6">Corte 30</option>
+              <option value="7">Corte 33</option>
+              <option value="8">Corte 35</option>
+              <option value="9">Corte 40</option>
+              <option value="10">Corte 45</option>
+              <option value="11">Corte 50</option>
+              <option value="12">Corte 55</option>
+              <option value="13">Corte 60</option>
+              <option value="14">Corte 65</option>
+              <option value="15">Corte 70</option>
+              <option value="16">Corte 75</option>
+              <option value="17">Corte 80</option>
+              <option value="18">Corte 85</option>
+              <option value="19">Corte 90</option>
+              <option value="20">Corte 95</option>
+              <option value="21">Corte 100</option>
+              <option value="22">Corte 105</option>
+              <option value="23">Corte 110</option>
+              <option value="24">Corte 115</option>
+              <option value="25">Corte 120</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label fw-bold text-muted">Acabamento</label>
+            <div class="d-flex gap-2">
+              <input type="radio" class="btn-check" name="material" id="matGalv" value="galvanizada" checked onchange="calcularPreco()">
+              <label class="btn btn-outline-secondary flex-fill" for="matGalv">Galvanizada</label>
+
+              <input type="radio" class="btn-check" name="material" id="matPreta" value="preta" onchange="calcularPreco()">
+              <label class="btn btn-outline-dark flex-fill" for="matPreta">Preta</label>
+
+              <input type="radio" class="btn-check" name="material" id="matBranca" value="branca" onchange="calcularPreco()">
+              <label class="btn btn-outline-secondary flex-fill" for="matBranca">Branca</label>
+            </div>
+          </div>
+
+          <div class="mb-4">
+            <label class="form-label fw-bold text-muted">Comprimento (Metros Lineares)</label>
+            <div class="input-group">
+              <input type="number" class="form-control" id="inputMetros" placeholder="Ex: 10" min="1" step="0.5" oninput="calcularPreco()">
+              <span class="input-group-text">metros</span>
+            </div>
+          </div>
+
+          <div class="card bg-light border-0">
+            <div class="card-body text-center">
+              <small class="text-muted text-uppercase fw-bold ls-2">Estimativa de Material</small>
+              <h2 class="display-5 fw-bold text-primary mt-2" id="displayPreco">R$ 0,00</h2>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer bg-light border-0">
+        <button type="button" class="btn btn-link text-muted text-decoration-none" data-bs-dismiss="modal">Fechar</button>
+        <a href="https://wa.me/5519997707650" id="btnWhatsOrcamento" target="_blank" class="btn btn-success fw-bold">
+          <i class="bi bi-whatsapp me-2"></i>Confirmar no Whats
+        </a>
+      </div>
+    </div>
   </div>
-</section><footer id="contato" class="footer">
-    <div class="container text-white">
-      <div class="row">
-        <div class="col-md-4">
-          <img src="oi_amigos-removebg-preview.png" alt="Logo Calhas 2D" style="max-width:160px;filter:brightness(1.15)"/>
-          <h5 class="mt-2">Calhas 2D</h5>
-          <p class="small">Comércio de Calhas 2D Ltda • CNPJ: 18.294.105/0001-66</p>
-          <p class="small">Rua Quaresmeira, 425, Jardim Presidente, Leme – SP</p>
-          <p class="small">Telefone: <a href="https://wa.me/551935715205" target="_blank" class="text-white text-decoration-underline">(19) 3571-5205</a> — clique para WhatsApp • Email: contato@calhas2d.com</p>
-        </div>
-        <div class="col-md-3">
-          <h6>Horário</h6>
-          <p class="small mb-0">Seg – Sex: 07:00 – 18:00</p>
-          <p class="small">Sáb: Fechado</p>
-          <p class="small mt-3">Formas de pagamento: PIX, cartão e transferência.</p>
-        </div>
-        <div class="col-md-3">
-          <h6>Sócios</h6>
-          <p class="small mb-0">Alexandre Carlos Martins</p>
-          <p class="small">Agnaldo Aparecido Martins</p>
-        </div>
-        </div>
-      </div>
-      <hr class="my-4" style="border-color:rgba(255,255,255,.3)">
-      <div class="d-flex justify-content-between small align-items-center">
-        <div>© <span id="year"></span> Calhas 2D. Todos os direitos reservados.</div>
-        <div>Desenvolvido por <strong>miguel martins</strong></div>
-      </div>
-    </div>
-  </footer>  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">  // Navbar muda ao rolar
-  window.addEventListener('scroll', () => {
-    const nav = document.querySelector('.navbar');
-    if (window.scrollY > 80) nav.classList.add('scrolled');
-    else nav.classList.remove('scrolled');
-  });
-</script>  <script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-
-  // Mostrar mensagem de agradecimento ao voltar da submissão
-  if (window.location.hash === '#obrigado') {
-    document.querySelector('#obrigado').style.display = 'block';
-    window.scrollTo({ top: document.querySelector('#obrigado').offsetTop - 80, behavior: 'smooth' });
-  }
-
-  // Smooth scroll para links internos
-  document.querySelectorAll('a[href^="#"]').forEach(a => {
-    a.addEventListener('click', function(e) {
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    });
-  });
-
-  // Ativar highlight de link ativo ao rolar
-  const sections = document.querySelectorAll('section[id]');
-  window.addEventListener('scroll', function() {
-    let current = '';
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop - 120;
-      if (pageYOffset >= sectionTop) current = section.getAttribute('id');
-    });
-    document.querySelectorAll('.nav-link').forEach(link => {
-      link.classList.remove('active');
-      if (link.getAttribute('href') === '#'+current) link.classList.add('active');
-    });
-  });
-
-  // Inicializar carousel com intervalo
-  var heroCarousel = document.querySelector('#heroCarousel');
-  if (heroCarousel) new bootstrap.Carousel(heroCarousel, { interval: 4500, ride: 'carousel' });
-
-</script>
-
-<!-- Botão WhatsApp flutuante com label -->
-<div class="whatsapp-float">
-  <a href="https://wa.me/5519997707650?text=Olá%2C+gostaria+de+solicitar+um+orçamento" target="_blank" rel="noopener" aria-label="WhatsApp"><img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="WhatsApp"></a>
-  <a class="wa-label" href="https://wa.me/5519997707650?text=Olá%2C+gostaria+de+solicitar+um+orçamento" target="_blank" rel="noopener">Fale conosco</a>
 </div>
-  <!-- SweetAlert2 -->
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <div class="floating-container">
+    <button class="chat-trigger-btn" onclick="toggleChat()">
+      <i class="bi bi-chat-dots-fill"></i>
+    </button>
+    
+    <a href="https://wa.me/5519997707650?text=Olá%2C+vi+o+site+e+gostaria+de+um+orçamento" target="_blank" class="wa-btn" title="Orçamento WhatsApp">
+      <i class="bi bi-whatsapp"></i>
+    </a>
+  </div>
 
-<script>
-  document.querySelector("form").addEventListener("submit", function (e) {
-    e.preventDefault(); // Impede abrir o FormSubmit
+  <div class="chat-window" id="chatWindow">
+    <div class="chat-header">
+      <h6 class="mb-0"><i class="bi bi-robot me-2"></i>Dúvidas Frequentes</h6>
+      <button class="btn-close-chat" onclick="toggleChat()"><i class="bi bi-x-lg"></i></button>
+    </div>
+    <div class="chat-body" id="chatBody">
+      <div class="chat-message bot-msg">
+        Olá! Eu sou o assistente virtual da Calhas 2D. Como posso ajudar você hoje?
+      </div>
+      <div class="chat-options" id="chatOptions"></div>
+    </div>
+  </div>
 
-    Swal.fire({
-      title: "Obrigado!",
-      text: "Sua solicitação foi enviada com sucesso.",
-      icon: "success",
-      confirmButtonText: "OK",
-      confirmButtonColor: "#0d6efd"
+  
+       
+             
+              
+        
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Navbar Scroll
+    const navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) navbar.classList.add('scrolled');
+      else navbar.classList.remove('scrolled');
     });
-  });("submit", function () {
-    setTimeout(() => {
-      Swal.fire({
-        title: "Obrigado!",
-        text: "Sua solicitação foi enviada com sucesso.",
-        icon: "success",
-        confirmButtonText: "OK",
-        confirmButtonColor: "#0d6efd"
+
+    // Smooth Scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        // Evita scroll suave para tabs do modal
+        if (this.getAttribute('data-bs-toggle') === 'pill' || this.getAttribute('data-bs-toggle') === 'modal') return;
+
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
       });
-    }, 300);
-  });
-</script> 
-  <script>("form").addEventListener("submit", function () {
+    });
+
+    var heroCarousel = document.querySelector('#heroCarousel');
+    if (heroCarousel) new bootstrap.Carousel(heroCarousel, { interval: 5000, ride: 'carousel' });
+
+    // Formulário Orçamento
+   
+      
+
+    /* --- SCRIPT DO CHAT FAQ --- */
+    const chatWindow = document.getElementById('chatWindow');
+    const chatBody = document.getElementById('chatBody');
+    const chatOptions = document.getElementById('chatOptions');
+
+    const faqData = [
+      { q: "Qual o horário de atendimento?", a: "Atendemos de Seg. a Sex. das 07:00 às 18:00. Sábados e Domingos fechado." },
+      { q: "Vocês cobram orçamento?", a: "Não! O orçamento é sem compromisso. Agendamos uma visita para avaliar." },
+      { q: "Quais formas de pagamento?", a: "Aceitamos PIX, Cartão de Crédito e Transferência Bancária." },
+      { q: "Atendem fora de Leme?", a: "Sim, atendemos Leme e cidades vizinhas próximas. Consulte disponibilidade no WhatsApp." },
+      { q: "Quero falar com atendente", a: "Sem problemas! Clique no botão verde do WhatsApp logo abaixo para falar com o Alexandre ou Agnaldo.", link: true }
+    ];
+
+    function toggleChat() {
+      if (chatWindow.classList.contains('active')) {
+        chatWindow.classList.remove('active');
+      } else {
+        chatWindow.classList.add('active');
+        if (chatOptions.innerHTML === "") {
+          loadOptions();
+        }
+      }
+    }
+
+    function loadOptions() {
+      chatOptions.innerHTML = "";
+      faqData.forEach((item, index) => {
+        const btn = document.createElement('button');
+        btn.className = 'chat-option-btn';
+        btn.innerText = item.q;
+        btn.onclick = () => handleOptionClick(item);
+        chatOptions.appendChild(btn);
+      });
+    }
+
+    function handleOptionClick(item) {
+      const userMsg = document.createElement('div');
+      userMsg.className = 'chat-message user-msg';
+      userMsg.innerText = item.q;
+      chatBody.insertBefore(userMsg, chatOptions);
+      chatBody.scrollTop = chatBody.scrollHeight;
+
       setTimeout(() => {
-        alert("Obrigado! Sua solicitação foi enviada com sucesso.");
+        const botMsg = document.createElement('div');
+        botMsg.className = 'chat-message bot-msg';
+        botMsg.innerHTML = item.a;
+        chatBody.insertBefore(botMsg, chatOptions);
+        chatBody.scrollTop = chatBody.scrollHeight;
+      }, 600);
+    }
+
+    // --- Script do Preloader ---
+    window.addEventListener("load", function() {
+      const preloader = document.getElementById("preloader");
+      setTimeout(() => {
+        preloader.classList.add("loaded");
+        setTimeout(() => {
+          preloader.remove(); 
+        }, 600);
       }, 500);
     });
-  </script>
-  <script>
-    // Envio AJAX sem abrir o FormSubmit
-    document.getElementById("orcamentoForm").addEventListener("submit", async function(e) {
-      e.preventDefault();
 
-      const formData = new FormData(this);
-      formData.append("_captcha", "false");
-      formData.append("_template", "box");
+    /* --- SERVIÇO DE DADOS (O Coração da conexão futura) ---
+   Para conectar com um banco real, você só precisará mudar estas funções 
+   para usar async/await fetch('sua-api.com/clientes')
+*/
+const apiService = {
+    key: 'calhas2d_clientes',
+    
+    getAll: function() {
+        return JSON.parse(localStorage.getItem(this.key)) || [];
+    },
+    
+    save: function(cliente) {
+        const clientes = this.getAll();
+        clientes.push(cliente);
+        localStorage.setItem(this.key, JSON.stringify(clientes));
+        return true;
+    },
+    
+    delete: function(id) {
+        const clientes = this.getAll().filter(c => c.id !== id);
+        localStorage.setItem(this.key, JSON.stringify(clientes));
+    }
+};
 
-      // Enviar para FormSubmit via fetch
-      await fetch("https://formsubmit.co/ajax/miguelhmartins870@gmail.com", {
-        method: "POST",
-        body: formData
-      });
+// --- FUNÇÕES DE INTERFACE ---
 
-      Swal.fire({
-        title: "Obrigado!",
-        text: "Sua solicitação foi enviada com sucesso.",
-        icon: "success",
-        confirmButtonText: "OK",
-        confirmButtonColor: "#0d6efd"
-      });
+function loadClients(filter = "") {
+    const tbody = document.getElementById('tabelaClientes');
+    const emptyMsg = document.getElementById('emptyMsg');
+    const clientes = apiService.getAll();
+    
+    // Filtragem
+    const filtered = clientes.filter(c => 
+        c.nome.toLowerCase().includes(filter.toLowerCase()) || 
+        c.doc.includes(filter)
+    );
 
-      this.reset();
+    tbody.innerHTML = '';
+    emptyMsg.style.display = filtered.length === 0 ? 'block' : 'none';
+
+    filtered.sort((a, b) => b.id - a.id).forEach(cli => {
+        const statusClass = {
+            'Lead': 'bg-info',
+            'Ativo': 'bg-warning text-dark',
+            'Finalizado': 'bg-success'
+        }[cli.status] || 'bg-secondary';
+
+        const tr = document.createElement('tr');
+        tr.className = 'align-middle';
+        tr.innerHTML = `
+            <td>
+                <div class="fw-bold small">${cli.nome}</div>
+                <div class="text-muted" style="font-size: 0.7rem;">${cli.doc || 'Sem DOC'}</div>
+            </td>
+            <td><span class="badge ${statusClass}" style="font-size: 0.65rem;">${cli.status}</span></td>
+            <td>
+                <div class="small">${cli.tel}</div>
+            </td>
+            <td class="text-end">
+                <a href="https://wa.me/55${cli.tel.replace(/\D/g,'')}" target="_blank" class="btn btn-sm btn-light text-success">
+                    <i class="bi bi-whatsapp"></i>
+                </a>
+                <button onclick="confirmDelete(${cli.id})" class="btn btn-sm btn-light text-danger">
+                    <i class="bi bi-trash"></i>
+                </button>
+            </td>
+        `;
+        tbody.appendChild(tr);
     });
+}
+
+// Evento de Cadastro
+document.getElementById('formCadastroCliente').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const novoCliente = {
+        id: Date.now(),
+        nome: document.getElementById('cliNome').value,
+        doc: document.getElementById('cliDoc').value,
+        tel: document.getElementById('cliTel').value,
+        status: document.getElementById('cliStatus').value,
+        end: document.getElementById('cliEnd').value,
+        data: new Date().toISOString()
+    };
+
+    if(apiService.save(novoCliente)) {
+        Swal.fire({ title: "Salvo!", icon: "success", timer: 1000, showConfirmButton: false });
+        this.reset();
+        loadClients();
+    }
+});
+
+// Busca em tempo real
+document.getElementById('searchClient').addEventListener('input', (e) => {
+    loadClients(e.target.value);
+});
+
+// Exclusão com confirmação
+function confirmDelete(id) {
+    Swal.fire({
+        title: 'Excluir cliente?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'Sim',
+        cancelButtonText: 'Não'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            apiService.delete(id);
+            loadClients();
+        }
+    });
+}
+
+// Exportar para Excel (CSV)
+function exportToCSV() {
+    const clientes = apiService.getAll();
+    if(clientes.length === 0) return;
+
+    let csv = "Nome,Documento,Telefone,Status,Endereco\n";
+    clientes.forEach(c => {
+        csv += `"${c.nome}","${c.doc}","${c.tel}","${c.status}","${c.end}"\n`;
+    });
+
+    const blob = new Blob([csv], { type: 'text/csv;charset=utf-16;' });
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.setAttribute("download", "clientes_calhas2d.csv");
+    link.click();
+}
+
+// Inicializar ao abrir o modal
+document.getElementById('clientModal').addEventListener('shown.bs.modal', () => loadClients());
+
+    /* --- CALCULADORA DE PREÇOS --- */
+function calcularPreco() {
+  const metros = parseFloat(document.getElementById('inputMetros').value) || 0;
+  const material = document.querySelector('input[name="material"]:checked').value; // galvanizada, preta ou branca
+  const corteIndex = document.getElementById('selectCorte').value; // 1 a 26
+
+  // 1. TABELA DE PREÇOS
+  const precosBasePorCorte = {
+    "1": 8.00,
+    "2": 12.00, 
+    "3": 16.00, 
+    "4": 20.00, 
+    "5": 22.40, 
+    "6": 24.00, 
+    "7": 26.40, 
+    "8": 28.00, 
+    "9": 32.00, 
+    "10": 36.00, 
+    "11": 40.00, 
+    "12": 44.00, 
+    "13": 48.00, 
+    "14": 52.00, 
+    "15": 56.00, 
+    "16": 60.00, 
+    "17": 64.00, 
+    "18": 68.00, 
+    "19": 72.00, 
+    "20": 76.00, 
+    "21": 80.00, 
+    "22": 84.00, 
+    "23": 88.00, 
+    "24": 92.00, 
+    "25": 96.00, 
+  };
+
+  // 2. Fator de Acréscimo por Pintura.
+  let fatorCor = 1.0; // Galvanizada (preço normal)
+  
+  if (material === 'preta' || material === 'branca') {
+    fatorCor = 1.30; // 30% mais caro se for pintada
+  }
+
+  // Lógica de Cálculo
+  let precoBase = precosBasePorCorte[corteIndex] || 0;
+  let precoFinal = (precoBase * fatorCor) * metros;
+
+  // Atualizar na Tela
+  const display = document.getElementById('displayPreco');
+  display.innerText = precoFinal.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+
+  // Atualizar botão do WhatsApp com o pedido pronto
+  const btnWhats = document.getElementById('btnWhatsOrcamento');
+  const nomeCorte = document.getElementById('selectCorte').options[document.getElementById('selectCorte').selectedIndex].text;
+  
+  const msg = `Olá! Fiz uma simulação no site:%0A- *Item:* ${nomeCorte}%0A- *Material:* ${material.toUpperCase()}%0A- *Medida:* ${metros} metros%0A- *Valor Estimado:* ${display.innerText}%0A%0AGostaria de confirmar esse pedido.`;
+  
+  btnWhats.href = `https://wa.me/5519997707650?text=${msg}`;
+}
+
+document.getElementById('formCadastroCliente')
+.addEventListener('submit', async function(e) {
+
+    e.preventDefault();
+
+    const formData = new FormData();
+    formData.append("nome", document.getElementById('cliNome').value);
+    formData.append("telefone", document.getElementById('cliTel').value);
+    formData.append("email", "");
+
+    try {
+        const response = await fetch('add_cliente.php', {
+            method: 'POST',
+            body: formData
+        });
+
+        const result = await response.json();
+
+        if(result.status === "ok") {
+
+            Swal.fire({
+                title: "Cliente salvo!",
+                icon: "success",
+                timer: 1000,
+                showConfirmButton: false
+            });
+
+            this.reset();
+            loadClientes();
+        }
+
+    } catch(error) {
+        Swal.fire("Erro ao salvar!");
+    }
+});
+async function loadClientes() {
+
+  const tbody = document.getElementById('tabelaClientes');
+
+  try {
+      const response = await fetch('get_clientes.php');
+      const clientes = await response.json();
+
+      tbody.innerHTML = '';
+
+      clientes.forEach(cliente => {
+
+          const tr = document.createElement('tr');
+
+          tr.innerHTML = `
+              <td>${cliente.nome}</td>
+              <td>${cliente.telefone}</td>
+              <td>${cliente.email ?? '-'}</td>
+          `;
+
+          tbody.appendChild(tr);
+      });
+
+  } catch(error) {
+      console.error("Erro ao carregar clientes");
+  }
+}
+document.getElementById('clientModal')
+.addEventListener('shown.bs.modal', loadClientes);
+
   </script>
+
+
+
+      
+<script>
+document.getElementById("formCliente").addEventListener("submit", async function(e) {
+    e.preventDefault();
+
+    const dados = {
+        nome: document.getElementById("nome").value,
+        telefone: document.getElementById("telefone").value,
+        endereco: document.getElementById("endereco").value
+    };
+
+    const resposta = await fetch("http://localhost/loja-calhas/api/cliente_criar.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(dados)
+    });
+
+    const resultado = await resposta.json();
+
+    if (resultado.status === "success") {
+        alert("Cliente cadastrado com sucesso!");
+        document.getElementById("formCliente").reset();
+    } else {
+        alert("Erro: " + resultado.message);
+    }
+});
+</script>
+
 </body>
 </html>

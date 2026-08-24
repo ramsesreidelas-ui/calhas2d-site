@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Cadastro de Cliente - Calhas 2D</title>
+
+  <link href="cadastro.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <a href="index.html" class="back-floating">
+    <i class="bi bi-arrow-left"></i>
+    </a>
+  </a>
+</head>
+
+<body>
+
+  
+
+<div class="login-bg">
+
+  <div class="glass-card">
+
+    <!-- ESQUERDA -->
+    <div class="left-panel">
+      <div class="brand">
+        <h2>Calhas 2D</h2>
+        <span>Ao se cadastrar você libera:</span>
+      </div>
+
+      <div class="badge-box">
+        
+        Atendimento Direto
+      </div>
+
+      <div class="badge-box">
+      
+        Orçamentos Personalizados
+      </div>
+
+      <div class="badge-box">
+       
+        Instalação Profissional
+      </div>
+    </div>
+
+    <!-- FORM -->
+    <div class="right-panel">
+
+      <div class="form-header">
+        <h3>Cadastro de Cliente</h3>
+        <p>Preencha os dados abaixo para continuar</p>
+      </div>
+
+      <form action="cadastro.php" method="POST">
+
+        <div class="input-box">
+          <input type="text" name="nome" required>
+          <label>Nome completo/Razão social</label>
+        </div>
+
+        <div class="input-box">
+          <input type="text" name="telefone" required>
+          <label>Telefone / WhatsApp</label>
+        </div>
+
+        <div class="input-box">
+          <input type="email" name="email" required>
+          <label>Email</label>
+        </div>
+
+        <div class="input-box">
+          <input type="text" name="endereco" required>
+          <label>Endereço</label>
+        </div>
+
+        <div class="input-box">
+          <input type="text" name="cpf" id="documento" required>
+          <label>CPF ou CNPJ</label>
+        </div>
+        <!-- Adicione este bloco antes do botão de submit no cadastro.html -->
+<div class="input-box">
+  <input type="password" name="senha" id="senha" required>
+  <label>Crie uma Senha</label>
+</div>
+
+<div class="input-box">
+  <input type="password" name="confirmar_senha" id="confirmar_senha" required>
+  <label>Confirme a Senha</label>
+</div>
+
+        <button type="submit" class="btn-submit">
+          <i class="bi bi-check-circle"></i>
+          Cadastrar Cliente
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+  
+    const doc = document.getElementById("documento");
+    const tel = document.querySelector('input[name="telefone"]');
+  
+    // =====================
+    // TELEFONE
+    // =====================
+    if (tel) {
+      tel.addEventListener("input", function () {
+        let v = this.value.replace(/\D/g, "").slice(0, 11);
+  
+        v = v.replace(/^(\d{2})(\d)/g, "($1) $2");
+        v = v.replace(/(\d{5})(\d)/, "$1-$2");
+  
+        this.value = v;
+      });
+    }
+  
+    // =====================
+    // CPF / CNPJ AUTO FORMAT
+    // =====================
+    if (doc) {
+      doc.addEventListener("input", function () {
+  
+        let v = this.value.replace(/\D/g, "");
+  
+        // CPF
+        if (v.length <= 11) {
+  
+          v = v.replace(/^(\d{3})(\d)/, "$1.$2");
+          v = v.replace(/^(\d{3})\.(\d{3})(\d)/, "$1.$2.$3");
+          v = v.replace(/^(\d{3})\.(\d{3})\.(\d{3})(\d)/, "$1.$2.$3-$4");
+  
+        }
+  
+        // CNPJ
+        else {
+  
+          v = v.replace(/^(\d{2})(\d)/, "$1.$2");
+          v = v.replace(/^(\d{2})\.(\d{3})(\d)/, "$1.$2.$3");
+          v = v.replace(/^(\d{2})\.(\d{3})\.(\d{3})(\d)/, "$1.$2.$3/$4");
+          v = v.replace(/^(\d{2})\.(\d{3})\.(\d{3})\/(\d{4})(\d)/, "$1.$2.$3/$4-$5");
+        }
+  
+        this.value = v.slice(0, 18);
+      });
+    }
+  
+  });
+  </script>
+</body>
+</html>
